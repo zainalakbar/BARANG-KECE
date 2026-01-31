@@ -17,9 +17,11 @@
 
 * {
   box-sizing: border-box;
+  /* Transisi halus untuk semua perubahan warna */
   transition:
-    background-color 0.3s,
-    color 0.3s;
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 body {
@@ -28,6 +30,7 @@ body {
   color: var(--text-color);
   margin: 0;
   text-align: center;
+  overflow-x: hidden; /* Mencegah scroll ke samping yang tidak sengaja */
 }
 
 /* --- 2. NAVIGASI --- */
@@ -40,7 +43,7 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1000; /* Memastikan navbar selalu di paling depan */
 }
 
 .logo {
@@ -122,7 +125,25 @@ body {
   display: inline-block;
 }
 
-/* --- 4. PRODUCT GRID --- */
+/* --- 4. SEARCH BAR --- */
+.search-container {
+  margin: 30px auto;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 2px solid var(--primary-red);
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  font-size: 16px;
+  outline: none;
+}
+
+/* --- 5. PRODUCT GRID & CARDS --- */
 .product-grid {
   display: flex;
   justify-content: center;
@@ -162,11 +183,30 @@ body {
 .btn-beli {
   background-color: var(--accent-green);
 }
+
 .btn-wa {
   background-color: #25d366;
 }
 
-/* --- 5. FOOTER --- */
+.btn-wa:hover {
+  background-color: #128c7e;
+  transform: scale(1.05); /* Zoom proporsional */
+}
+
+/* --- 6. ANIMASI SCROLL (REVEAL) --- */
+.reveal {
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* --- 7. FOOTER --- */
 .main-footer {
   background-color: #1a1a1a;
   color: white;
@@ -197,7 +237,7 @@ body {
   font-size: 14px;
 }
 
-/* --- 6. POP UP MODAL --- */
+/* --- 8. POP UP MODAL --- */
 .modal {
   display: none;
   position: fixed;
@@ -239,7 +279,7 @@ body {
   cursor: pointer;
 }
 
-/* --- 7. RESPONSIVE --- */
+/* --- 9. RESPONSIVE --- */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
