@@ -1,4 +1,23 @@
 // pesan saat halaman dimuat
+const modal = document.getElementById("promoModal");
+const closeBtn = document.querySelector(".close-btn");
+
 window.onload = function () {
-  alert("Selamat datang di Barang Kece! Dapatkan promo menarik hari ini.");
+  this.setTimeout(function () {
+    modal.style.display = "block";
+  }, 3000);
+};
+
+function closeModal() {
+  modal.style.display = "none";
+}
+
+closeBtn.onclick = function () {
+  closeModal();
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    closeModal();
+  }
 };
