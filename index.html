@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Barang Kece - Rekomendasi Produk Viral</title>
+    <title>Barang Kece - Toko Viral Terpercaya</title>
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
   <body>
@@ -11,23 +11,27 @@
       <div class="logo">Barang<span>Kece</span></div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="#">Produk</a></li>
-        <li><a href="#">Tentang</a></li>
-        <li><a href="#" class="btn-kontak">Kontak</a></li>
+        <li><a href="#productGrid">Produk</a></li>
+        <li><a href="#testimoni">Tentang</a></li>
+        <li>
+          <a
+            href="https://wa.me/6287891444844"
+            target="_blank"
+            class="btn-kontak"
+            >Kontak</a
+          >
+        </li>
         <li><button id="darkModeToggle" class="btn-dark">🌙</button></li>
       </ul>
     </nav>
 
-    <section class="hero">
+    <header class="hero">
       <div class="hero-content">
         <h2>Cari Barang Kece & Viral?</h2>
-        <p>
-          Kami telah mengurasi produk terbaik dengan harga paling jujur hanya
-          untuk kamu.
-        </p>
+        <p>Kami telah mengurasi produk terbaik hanya untuk kamu.</p>
         <a href="#productGrid" class="btn-hero">Mulai Belanja</a>
       </div>
-    </section>
+    </header>
 
     <main>
       <section class="search-container">
@@ -45,119 +49,188 @@
           <img
             src="https://www.techspinreview.com/wp-content/uploads/2022/11/Steelseries-Apex-3-03-960x540.webp"
             alt="Keyboard"
+            onclick="
+              bukaDetail(
+                'Keyboard Aesthetic',
+                'Rp 250.000',
+                'https://www.techspinreview.com/wp-content/uploads/2022/11/Steelseries-Apex-3-03-960x540.webp',
+                'Keyboard mekanik RGB terbaik untuk produktivitas.',
+              )
+            "
           />
           <h3>Keyboard Aesthetic</h3>
           <p>Harga: Rp 250.000</p>
-          <a href="#" class="btn-beli">Cek di Shopee</a>
-          <a
-            href="https://wa.me/6287891444844?text=Halo, saya mau tanya Keyboard Aesthetic"
-            target="_blank"
-            class="btn-wa"
+          <a href="https://www.google.com" class="btn-shopee" target="_blank"
+            >Cek di Shopee</a
+          >
+          <a href="https://wa.me/6287891444844" class="btn-wa" target="_blank"
             >Tanya via WA</a
           >
         </div>
-
         <div class="card reveal">
           <img
             src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300"
             alt="Headphone"
+            onclick="
+              bukaDetail(
+                'Headphone Kece',
+                'Rp 150.000',
+                'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300',
+                'Headphone bass mantap!',
+              )
+            "
           />
           <h3>Headphone Kece</h3>
           <p>Harga: Rp 150.000</p>
-          <a href="#" class="btn-beli">Cek di Shopee</a>
-          <a
-            href="https://wa.me/6287891444844?text=Halo, saya mau tanya Headphone Kece"
-            target="_blank"
-            class="btn-wa"
+          <a href="https://www.google.com" class="btn-shopee" target="_blank"
+            >Cek di Shopee</a
+          >
+          <a href="https://wa.me/6287891444844" class="btn-wa" target="_blank"
             >Tanya via WA</a
           >
         </div>
-
         <div class="card reveal">
           <span class="badge">Diskon 50%</span>
           <img
             src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=300"
             alt="Mouse"
+            onclick="
+              bukaDetail(
+                'Mouse Gaming',
+                'Rp 120.000',
+                'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=300',
+                'Mouse gaming wireless super responsif.',
+              )
+            "
           />
           <h3>Mouse Gaming Wireless</h3>
           <p>Harga: Rp 120.000</p>
-          <a href="#" class="btn-beli">Cek di Shopee</a>
-          <a
-            href="https://wa.me/6287891444844?text=Halo, saya mau tanya Mouse Gaming"
-            target="_blank"
-            class="btn-wa"
+          <a href="https://www.google.com" class="btn-shopee" target="_blank"
+            >Cek di Shopee</a
+          >
+          <a href="https://wa.me/6287891444844" class="btn-wa" target="_blank"
             >Tanya via WA</a
           >
         </div>
-
         <div class="card reveal">
           <img
             src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=300"
             alt="Stand Laptop"
+            onclick="
+              bukaDetail(
+                'Stand Laptop',
+                'Rp 95.000',
+                'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=300',
+                'Stand aluminium kuat.',
+              )
+            "
           />
           <h3>Stand Laptop Aluminium</h3>
           <p>Harga: Rp 95.000</p>
-          <a href="#" class="btn-beli">Cek di Shopee</a>
-          <a
-            href="https://wa.me/6287891444844?text=Halo, saya mau tanya Stand Laptop"
-            target="_blank"
-            class="btn-wa"
+          <a href="https://www.google.com" class="btn-shopee" target="_blank"
+            >Cek di Shopee</a
+          >
+          <a href="https://wa.me/6287891444844" class="btn-wa" target="_blank"
             >Tanya via WA</a
           >
         </div>
-
         <div class="card reveal">
           <span class="badge">Viral</span>
           <img
             src="https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=300"
             alt="Lampu RGB"
+            onclick="
+              bukaDetail(
+                'Lampu RGB',
+                'Rp 85.000',
+                'https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=300',
+                'Lampu meja estetik.',
+              )
+            "
           />
           <h3>Lampu Meja RGB Aesthetic</h3>
           <p>Harga: Rp 85.000</p>
-          <a href="#" class="btn-beli">Cek di Shopee</a>
-          <a
-            href="https://wa.me/6287891444844?text=Halo, saya mau tanya Lampu RGB"
-            target="_blank"
-            class="btn-wa"
+          <a href="https://www.google.com" class="btn-shopee" target="_blank"
+            >Cek di Shopee</a
+          >
+          <a href="https://wa.me/6287891444844" class="btn-wa" target="_blank"
             >Tanya via WA</a
           >
         </div>
-
         <div class="card reveal">
           <img
             src="https://images.unsplash.com/photo-1616410011236-7a42121dd981?w=300"
             alt="Webcam"
+            onclick="
+              bukaDetail(
+                'Webcam HD',
+                'Rp 175.000',
+                'https://images.unsplash.com/photo-1616410011236-7a42121dd981?w=300',
+                'Webcam jernih untuk meeting.',
+              )
+            "
           />
           <h3>Webcam HD 1080p</h3>
           <p>Harga: Rp 175.000</p>
-          <a href="#" class="btn-beli">Cek di Shopee</a>
-          <a
-            href="https://wa.me/6287891444844?text=Halo, saya mau tanya Webcam HD"
-            target="_blank"
-            class="btn-wa"
+          <a href="https://www.google.com" class="btn-shopee" target="_blank"
+            >Cek di Shopee</a
+          >
+          <a href="https://wa.me/6287891444844" class="btn-wa" target="_blank"
             >Tanya via WA</a
           >
         </div>
       </section>
+
+      <section class="testimoni reveal" id="testimoni">
+        <h2>Apa Kata Pelanggan Kece?</h2>
+        <div class="testi-container">
+          <div class="testi-card">
+            <p>"Barangnya estetik parah!"</p>
+            <h4>- Andi</h4>
+          </div>
+          <div class="testi-card">
+            <p>"Respon WA cepet banget."</p>
+            <h4>- Budi</h4>
+          </div>
+          <div class="testi-card">
+            <p>"Gak nyesel belanja di sini."</p>
+            <h4>- Citra</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq reveal" id="faq">
+        <h2>FAQ</h2>
+        <div class="faq-container">
+          <details>
+            <summary>Apakah Original?</summary>
+            <p>100% Original dan bergaransi.</p>
+          </details>
+          <details>
+            <summary>Bisa COD?</summary>
+            <p>Bisa! Hubungi admin via WA.</p>
+          </details>
+        </div>
+      </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer" id="tentang-kami">
       <div class="footer-container">
         <div class="footer-info">
           <h3>Barang<span>Kece</span></h3>
-          <p>Tempatnya Produk viral dan unik dengan harga terbaik.</p>
+          <p>Produk viral harga jujur untuk gaya hidupmu.</p>
         </div>
         <div class="footer-links">
           <h4>Navigasi</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">Produk</a></li>
-            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#productGrid">Produk</a></li>
+            <li><a href="#testimoni">Testimoni</a></li>
           </ul>
         </div>
         <div class="footer-social">
           <h4>Ikuti Kami</h4>
-          <p>Instagram | Tiktok | Facebook</p>
+          <p>Instagram | TikTok | Facebook</p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -168,14 +241,25 @@
     <div id="promoModal" class="modal">
       <div class="modal-content">
         <span class="close-btn" onclick="closeModal()">&times;</span>
-        <h2>🔥 PROMO SPESIAL! 🔥</h2>
-        <p>
-          Gunakan kode <strong>BARANGKECE</strong> untuk diskon 20% di pembelian
-          pertama kamu!
-        </p>
-        <button onclick="closeModal()" class="btn-hero">Ambil Diskon!</button>
+        <h2>🔥 PROMO 🔥</h2>
+        <p>Kode: <strong>BARANGKECE</strong> diskon 20%!</p>
       </div>
     </div>
+
+    <div id="detailModal" class="modal">
+      <div class="modal-content detail-container">
+        <span class="close-btn" onclick="closeDetail()">&times;</span>
+        <div id="detailContent"></div>
+      </div>
+    </div>
+
+    <a href="https://wa.me/6287891444844" class="floating-wa" target="_blank">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WA"
+      />
+      <span>Chat Admin</span>
+    </a>
 
     <script src="./JS/script.js"></script>
   </body>

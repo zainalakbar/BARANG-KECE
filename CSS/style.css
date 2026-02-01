@@ -1,335 +1,381 @@
-/* --- 1. VARIABEL & RESET --- */
 :root {
-  --bg-color: #f4f4f4;
-  --text-color: #333;
-  --card-bg: #ffffff;
-  --nav-bg: #ffffff;
-  --primary-red: #ff4757;
-  --accent-green: #2ed573;
+  --bg: #f4f4f4;
+  --text: #333;
+  --red: #ff4757;
+  --card: #fff;
+  --shopee: #ee4d2d;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 [data-theme="dark"] {
-  --bg-color: #121212;
-  --text-color: #f4f4f4;
-  --card-bg: #1e1e1e;
-  --nav-bg: #1e1e1e;
+  --bg: #121212;
+  --text: #f4f4f4;
+  --card: #1e1e1e;
 }
-
 * {
   box-sizing: border-box;
-  /* Transisi halus untuk semua perubahan warna */
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
-}
-
-body {
-  font-family: "Arial", sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
   margin: 0;
-  text-align: center;
-  overflow-x: hidden; /* Mencegah scroll ke samping yang tidak sengaja */
+  padding: 0;
+  transition: 0.3s;
+}
+body {
+  font-family: sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* --- 2. NAVIGASI --- */
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--nav-bg);
+  background: var(--card);
   padding: 15px 10%;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 1000; /* Memastikan navbar selalu di paling depan */
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--text-color);
-}
-
 .logo span {
-  color: var(--primary-red);
+  color: var(--red);
+  font-weight: bold;
 }
-
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
-  align-items: center;
+  gap: 20px;
 }
-
 .nav-links a {
   text-decoration: none;
-  color: var(--text-color);
-  font-weight: 500;
+  color: var(--text);
+  font-weight: bold;
 }
-
-.nav-links a:hover {
-  color: var(--primary-red);
-}
-
 .btn-kontak {
-  background-color: var(--primary-red);
-  color: white !important;
+  background: var(--red);
+  color: #fff !important;
   padding: 8px 20px;
   border-radius: 20px;
 }
-
 .btn-dark {
   background: none;
-  border: 1px solid var(--primary-red);
+  border: 1px solid var(--red);
   cursor: pointer;
-  font-size: 18px;
   border-radius: 50%;
   padding: 5px;
-  color: var(--text-color);
+  color: var(--text);
 }
 
-/* --- 3. HERO SECTION --- */
+/* HERO */
 .hero {
+  height: 350px;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1000");
-  background-size: cover;
-  background-position: center;
-  height: 400px;
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1000")
+      center/cover;
   display: flex;
-  justify-content: center;
   align-items: center;
-  color: white;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
 }
-
-.hero-content h2 {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-.hero-content p {
-  font-size: 18px;
-  margin-bottom: 25px;
-  max-width: 600px;
-  margin: 0 auto 25px;
-}
-
 .btn-hero {
-  background-color: var(--primary-red);
-  color: white;
-  padding: 15px 35px;
+  background: var(--red);
+  color: #fff;
+  padding: 12px 30px;
   text-decoration: none;
-  font-weight: bold;
   border-radius: 30px;
+  margin-top: 15px;
   display: inline-block;
+  font-weight: bold;
 }
 
-/* --- 4. SEARCH BAR --- */
+/* SEARCH */
 .search-container {
-  margin: 30px auto;
+  margin: 40px auto;
   max-width: 600px;
   padding: 0 20px;
 }
-
 #searchInput {
   width: 100%;
-  padding: 12px 20px;
+  padding: 12px;
   border-radius: 25px;
-  border: 2px solid var(--primary-red);
-  background-color: var(--card-bg);
-  color: var(--text-color);
-  font-size: 16px;
+  border: 2px solid var(--red);
   outline: none;
+  background: var(--card);
+  color: var(--text);
 }
 
-/* --- 5. PRODUCT GRID & CARDS --- */
+/* PRODUCT GRID */
 .product-grid {
   display: flex;
-  justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
-  padding: 50px 10%;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 10%;
 }
-
 .card {
-  background-color: var(--card-bg);
+  background: var(--card);
   width: 280px;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
-
+.card:hover {
+  transform: translateY(-10px);
+}
 .card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 10px;
+  cursor: pointer;
   margin-bottom: 15px;
 }
+.card h3 {
+  margin-bottom: 8px;
+}
+.badge {
+  position: absolute;
+  top: 10px;
+  left: -5px;
+  background: var(--red);
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 0 5px 5px 0;
+  font-size: 12px;
+  font-weight: bold;
+}
 
-.btn-beli,
+.btn-shopee,
 .btn-wa {
   display: block;
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
+  color: #fff;
   text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
   font-weight: bold;
-  color: white;
+  text-align: center;
 }
-
-.btn-beli {
-  background-color: var(--accent-green);
+.btn-shopee {
+  background: var(--shopee);
+  margin-top: 15px;
 }
-
 .btn-wa {
-  background-color: #25d366;
+  background: #25d366;
 }
 
-.btn-wa:hover {
-  background-color: #128c7e;
-  transform: scale(1.05); /* Zoom proporsional */
+/* TESTIMONI & FAQ (Spacing Revisi) */
+.testimoni {
+  padding: 80px 10%;
+  background: var(--card);
+  margin: 40px 0;
+  text-align: center;
+}
+.testi-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 35px;
+}
+.testi-card {
+  background: var(--bg);
+  padding: 25px;
+  border-radius: 15px;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-style: italic;
 }
 
-/* --- 6. ANIMASI SCROLL (REVEAL) --- */
-.reveal {
-  position: relative;
-  transform: translateY(50px);
-  opacity: 0;
-  transition: all 0.8s ease;
+.faq {
+  padding: 80px 10%;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.faq-container {
+  max-width: 700px;
+  margin: 40px auto 0 auto;
+  text-align: left;
+}
+details {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.reveal.active {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-/* --- 7. FOOTER --- */
+/* FOOTER */
 .main-footer {
-  background-color: #1a1a1a;
-  color: white;
-  padding: 40px 10% 20px;
-  margin-top: 50px;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 70px 10% 30px;
+  margin-top: 80px;
 }
-
 .footer-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 30px;
   text-align: left;
 }
-
 .footer-links ul {
   list-style: none;
-  padding: 0;
 }
 .footer-links a {
   color: #bbb;
   text-decoration: none;
-  line-height: 2;
 }
 .footer-bottom {
-  border-top: 1px solid #444;
-  margin-top: 20px;
+  text-align: center;
+  border-top: 1px solid #333;
+  margin-top: 40px;
   padding-top: 20px;
-  font-size: 14px;
+  color: #777;
 }
 
-/* --- 8. POP UP MODAL --- */
+/* MODAL PROMO (Fix Lega) */
 .modal {
   display: none;
   position: fixed;
-  z-index: 2000;
+  z-index: 3000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8);
 }
-
 .modal-content {
-  background-color: var(--card-bg);
-  color: var(--text-color);
-  margin: 10% auto;
-  padding: 40px;
+  background-color: var(--card);
+  color: var(--text);
+  margin: 15% auto;
+  padding: 60px 30px;
   border-radius: 20px;
-  max-width: 450px;
+  max-width: 500px;
+  width: 90%;
   position: relative;
-  animation: muncul 0.4s ease-out;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
-
-@keyframes muncul {
-  from {
-    transform: scale(0.7);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
 .close-btn {
   position: absolute;
   right: 20px;
   top: 10px;
   font-size: 30px;
   cursor: pointer;
+  color: var(--text);
 }
 
-/* --- 9. RESPONSIVE --- */
-@media (max-width: 768px) {
+.floating-wa {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 1500;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.floating-wa img {
+  width: 25px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- RESPONSIVE UNTUK TABLET & HP --- */
+
+@media (max-width: 992px) {
+  /* Untuk Tablet */
   .navbar {
-    flex-direction: column;
-    gap: 15px;
+    padding: 15px 5%;
   }
-  .nav-links {
-    gap: 15px;
+  .product-grid {
+    padding: 40px 5%;
+    gap: 20px;
+  }
+  .hero {
+    height: 300px;
   }
   .hero-content h2 {
-    font-size: 28px;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Untuk HP */
+  .navbar {
+    padding: 10px 5%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-links {
+    gap: 10px;
+    font-size: 14px;
+  }
+  .btn-kontak {
+    padding: 5px 15px;
+    font-size: 13px;
+  }
+
+  .hero {
+    height: 250px;
+    padding: 0 20px;
+  }
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .product-grid {
+    padding: 30px 5%;
+    gap: 15px;
+  }
+  .card {
+    width: 100%;
+    max-width: 320px;
+  } /* Kartu jadi penuh di layar HP */
+
+  .testi-card {
+    width: 100%;
   }
   .footer-container {
     flex-direction: column;
     text-align: center;
-    gap: 20px;
+    gap: 30px;
   }
-}
+  .footer-links h4,
+  .footer-social h4 {
+    display: block;
+    margin: 0 auto 15px auto;
+  }
 
-/* --- FITUR TAMBAHAN UNTUK PRODUK & ANIMASI --- */
-
-/* 1. Badge Best Seller/Promo */
-.card {
-  position: relative; /* Supaya badge nempel di dalam kartu */
-  overflow: hidden;
-}
-
-.badge {
-  position: absolute;
-  top: 15px;
-  left: -5px;
-  background-color: var(--primary-red);
-  color: white;
-  padding: 5px 15px;
-  font-size: 11px;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-radius: 0 5px 5px 0;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  z-index: 10;
-}
-
-/* 2. Animasi Muncul Saat Scroll (Reveal) */
-.reveal {
-  position: relative;
-  transform: translateY(50px);
-  opacity: 0;
-  transition: all 0.8s ease;
-}
-
-.reveal.active {
-  transform: translateY(0);
-  opacity: 1;
+  /* Tombol WA Melayang agar tidak menutupi konten penting di HP */
+  .floating-wa {
+    bottom: 15px;
+    right: 15px;
+    padding: 10px 15px;
+    font-size: 13px;
+  }
 }
